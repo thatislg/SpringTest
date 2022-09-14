@@ -3,6 +3,9 @@
  */
 package vn.com.vti.springexam.form;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 /**
  * @author thatislg1720
  *
@@ -44,8 +47,12 @@ public class PrefectureForm {
 	public void setPopulation(Integer population) {
 		this.population = population;
 	}
+	@NotNull
 	private Integer id;
+	
+	@NotBlank
 	private String name;
+	@NotNull
 	private Integer population;
 	
 }

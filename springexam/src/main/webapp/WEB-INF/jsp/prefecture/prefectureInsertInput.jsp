@@ -22,14 +22,19 @@ dt {
 	<dl>
 		<dt>ID</dt>
 		<dd>
+			<form:errors path="id" element="p"/>
 			<form:input path="id"/>
 		</dd>
 		<dt>都道府県名</dt>
 		<dd>
+			<form:errors path="name" element="p"/>
 			<form:input path="name"/>
 		</dd>
 		<dt>人口</dt>
-			<dd><form:input path="population"/></dd>
+			
+			<dd>
+			<form:errors path="population" element="p"/>
+			<form:input path="population"/></dd>
 		</dl>
 			<input type="submit" value="追加">
 		</form:form>
