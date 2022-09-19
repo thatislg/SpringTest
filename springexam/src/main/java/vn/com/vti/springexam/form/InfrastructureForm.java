@@ -5,12 +5,17 @@ package vn.com.vti.springexam.form;
 
 import java.util.Date;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 /**
  * @author thatislg1720
  *
  */
 public class InfrastructureForm {
-
+	@NotNull
 	private Integer id;
 	/**
 	 * @return id
@@ -39,8 +44,11 @@ public class InfrastructureForm {
 	/**
 	 * @return regisDate
 	 */
-
+	@NotNull
+	@NotBlank
 	private String name;
+	@NotNull
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private Date registDate;
 	/**
 	 * @return registDate

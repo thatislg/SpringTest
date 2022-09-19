@@ -18,10 +18,15 @@
 		<dd>
 			<c:out value="${infrastructureForm.name}" />
 		</dd>
+		<dt>登録日</dt>
+		<dd>
+			<c:out value="${infrastructureForm.registDate}" />
+		</dd>
 	</dl>
 	<form:form modelAttribute="infrastructureForm" action="input">
 		<form:hidden path="id" />
 		<form:hidden path="name" />
+		<form:hidden path="registDate" />
 		<input type="submit" value="戻る">
 	</form:form>
 </body>

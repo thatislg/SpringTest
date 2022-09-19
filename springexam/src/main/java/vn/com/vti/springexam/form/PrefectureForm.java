@@ -3,6 +3,9 @@
  */
 package vn.com.vti.springexam.form;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
@@ -49,10 +52,40 @@ public class PrefectureForm {
 	}
 	@NotNull
 	private Integer id;
-	
+
 	@NotBlank
 	private String name;
 	@NotNull
 	private Integer population;
-	
+
+	private Integer section3Id;
+
+	/**
+	 * @return section3Id
+	 */
+	public Integer getSection3Id() {
+		return section3Id;
+	}
+	/**
+	 * @param section3Id セットする section3Id
+	 */
+	public void setSection3Id(Integer section3Id) {
+		this.section3Id = section3Id;
+	}
+	/**
+	 * @return infrastructureIdList
+	 */
+	public List<Integer> getInfrastructureIdList() {
+		return infrastructureIdList;
+	}
+	/**
+	 * @param infrastructureIdList セットする infrastructureIdList
+	 */
+	public void setInfrastructureIdList(List<Integer> infrastructureIdList) {
+		this.infrastructureIdList = infrastructureIdList;
+	}
+	private List<Integer> infrastructureIdList = new ArrayList<>();
+
+
+
 }

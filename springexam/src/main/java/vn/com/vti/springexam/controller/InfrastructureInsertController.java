@@ -3,8 +3,11 @@
  */
 package vn.com.vti.springexam.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -29,7 +32,10 @@ public class InfrastructureInsertController {
 	}
 	
 	@RequestMapping("/confirm")
-	public String confirm(InfrastructureForm infrastructureForm, Model model) {
+	public String confirm(@Valid InfrastructureForm infrastructureForm, BindingResult bindingResult, Model model) {
+		if (bindingResult.hasErrors()) {
+			return input(infrastructureForm);
+		}
 		return "infrastructure/infrastructureInsertConfirm";
 	}
 }
