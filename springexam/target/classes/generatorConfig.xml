@@ -27,9 +27,10 @@
     	 <table tableName="PREFECTURE"></table> 
     	 <table tableName="PREFECTURE_INFRASTRUCTURE"></table>
     	 <table tableName="INFRASTRUCTURE"></table> 
+    	 <table tableName="SECTION3"></table> 
     -->
-     
-	 <table tableName="SECTION3"></table> 
+     <table tableName="prefecture"></table> 
+	 
   </context>
 </generatorConfiguration>
 
