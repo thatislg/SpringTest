@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
-Built-By: thatislg1720
-Build-Jdk: 17.0.3
+Built-By: lethihuongthuy
+Build-Jdk: 11.0.16
 Implementation-Title: springexam
 Implementation-Version: 0.0.1-SNAPSHOT
 Implementation-Vendor-Id: vn.com.vti
