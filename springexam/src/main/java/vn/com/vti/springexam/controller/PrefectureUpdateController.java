@@ -86,7 +86,8 @@ public class PrefectureUpdateController {
 
 	@RequestMapping("/input")
 	public String input(PrefectureForm prefectureForm, Model model) {
-
+		
+		
 		Section3Example section3Example = new Section3Example();
 		section3Example.setOrderByClause("id");
 		List<Section3> section3List = section3Mapper.selectByExample(section3Example);
@@ -108,6 +109,7 @@ public class PrefectureUpdateController {
 
 	@RequestMapping("/confirm")
 	public String confirm(PrefectureForm prefectureForm, Model model) {
+		 
 		if(prefectureForm.getSection3Id() != null) {
 			Section3 section3 = section3Mapper.selectByPrimaryKey(prefectureForm.getSection3Id());
 			model.addAttribute("section3", section3);
@@ -145,6 +147,7 @@ public class PrefectureUpdateController {
 		PrefectureInfrastructureExample prefectureInfrastructureExample = new PrefectureInfrastructureExample();
 		prefectureInfrastructureExample.createCriteria().andPrefectureIdEqualTo(prefectureForm.getId());
 		prefectureInfrastructureMapper.deleteByExample(prefectureInfrastructureExample);
+		
 		List<Integer> infrastructureIdList = prefectureForm.getInfrastructureIdList();
 		for(Integer infrastructureId : infrastructureIdList) {
 			PrefectureInfrastructure prefectureInfrastructure = new PrefectureInfrastructure();
