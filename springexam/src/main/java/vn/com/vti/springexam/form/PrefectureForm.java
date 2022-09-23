@@ -59,7 +59,21 @@ public class PrefectureForm {
 	private Integer population;
 
 	private Integer section3Id;
+	
+	private Integer section8Id;
 
+	/**
+	 * @return section8Id
+	 */
+	public Integer getSection8Id() {
+		return section8Id;
+	}
+	/**
+	 * @param section8Id セットする section8Id
+	 */
+	public void setSection8Id(Integer section8Id) {
+		this.section8Id = section8Id;
+	}
 	/**
 	 * @return section3Id
 	 */
@@ -85,6 +99,8 @@ public class PrefectureForm {
 		this.infrastructureIdList = infrastructureIdList;
 	}
 	private List<Integer> infrastructureIdList = new ArrayList<>();
+
+
 
 
 

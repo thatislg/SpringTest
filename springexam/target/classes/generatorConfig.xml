@@ -29,7 +29,7 @@
     	 <table tableName="INFRASTRUCTURE"></table> 
     	 <table tableName="SECTION3"></table> 
     -->
-     <table tableName="prefecture"></table> 
+     <table tableName="section8"></table> 
 	 
   </context>
 </generatorConfiguration>
