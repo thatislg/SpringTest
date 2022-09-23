@@ -6,24 +6,31 @@
 
     <!-- スキーマ情報を取得する DB への接続設定 -->
     <jdbcConnection driverClass="org.postgresql.Driver"
-     connectionURL="jdbc:postgresql://localhost:5432/bookshop"
+     connectionURL="jdbc:postgresql://153.92.214.210:5432/bookshop"
      userId="postgres"
-     password="postgres" />
+     password="98919891" />
 
     <!-- SELECT 結果等を格納するドメインモデルを生成する設定 -->
-    <javaModelGenerator targetPackage="vn.com.vti.springexam.entity" targetProject="src\main\java">
+    <javaModelGenerator targetPackage="vn.com.vti.springexam.entity" targetProject="src/main/java">
     </javaModelGenerator>
 
     <!-- SQL 設定が記述された XML を生成する設定 -->
-    <sqlMapGenerator targetPackage="vn.com.vti.springexam.mapper" targetProject="src\main\java">
+    <sqlMapGenerator targetPackage="vn.com.vti.springexam.mapper" targetProject="src/main/java">
     </sqlMapGenerator>
     <!-- マッパークラスを生成する設定 -->
-    <javaClientGenerator type="XMLMAPPER" targetPackage="vn.com.vti.springexam.mapper" targetProject="src\main\java">
+    <javaClientGenerator type="XMLMAPPER" targetPackage="vn.com.vti.springexam.mapper" targetProject="src/main/java">
     </javaClientGenerator>
 
     <!-- コードを生成するテーブルを指定 -->
-    <table  tableName="BUSINESS_TYPE"></table>
-
+    <!-- 2 bảng này đã build rồi. 
+    	 <table  tableName="BOOK"></table> 
+    	 <table tableName="PREFECTURE"></table> 
+    	 <table tableName="PREFECTURE_INFRASTRUCTURE"></table>
+    	 <table tableName="INFRASTRUCTURE"></table> 
+    	 <table tableName="SECTION3"></table> 
+    -->
+     <table tableName="section8"></table> 
+	 
   </context>
 </generatorConfiguration>
 
