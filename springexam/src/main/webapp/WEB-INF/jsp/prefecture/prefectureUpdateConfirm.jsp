@@ -28,7 +28,7 @@
 		</dd>
 		<dt>8地方区分</dt>
 		<dd>
-			<c:forEach items="${section8List}" var="section8Id">
+			<c:forEach items="${section8List}" var="section8">
 				<c:out value="${section8.name}" />
 			</c:forEach>
 		</dd>
