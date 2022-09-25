@@ -20,7 +20,7 @@
 		}
 		alert(str);
 	}
-	function search() {
+	function searchObject() {
 		var obj = objects[document.searchForm.id.value];
 		if (obj == null) {
 			alert("存在しません");
@@ -48,7 +48,7 @@
 		<input type="button" value="全表示" onclick="displayAll()">
 	</form>
 	<form name="searchForm">
-		<input type="text" name="search" /> <input type="button" value="検査"
+		<input type="text" name="id"> <input type="button" value="検査"
 			onclick="searchObject()">
 	</form>
 </body>

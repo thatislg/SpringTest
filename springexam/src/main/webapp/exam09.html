@@ -2,9 +2,51 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Exam09</title>
 </head>
 <body>
-
+<script>
+	function checkInput(){
+		// Lấy giá trị sau khi các input được nhập
+		var inputId = document.getElementById("memberId").value;
+		var inputName = document.getElementById("memberName").value;
+		var inputPw = document.getElementById("password").value;
+		
+		// Kiểm tra check xem input nào trống
+		var strResult = new String();
+		if(inputId == ""){
+			strResult += "会員IDを入力してください\n";
+		}
+		if(inputName == ""){
+			strResult += "会員名を入力してください\n";
+		}
+		if(inputPw == ""){
+			strResult += "パスワードを入力してください\n";
+		}
+		
+		// Điều kiện hiển thị
+		if(strResult == ""){
+			strResult += "問題がありません";
+			return alert(strResult);
+		} else {
+			return alert(strResult);
+		}
+	}
+</script>
+<form action="submit">
+	<fieldset>
+		<dl>
+			<dt>会員ID</dt>
+			<dd><input type="text" id="memberId"></dd>
+			<dt>会員名</dt>
+			<dd><input type="text" id="memberName"></dd>
+			<dt>パスワード</dt>
+			<dd><input type="text" id="password"></dd>
+		</dl>
+	</fieldset>
+	<fieldset>
+		<input type="submit" id="submit" value="登録" onclick="checkInput()">
+	</fieldset>
+</form>
 </body>
 </html>

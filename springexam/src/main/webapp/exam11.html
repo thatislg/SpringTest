@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exam11</title>
+</head>
+<body>
+<script>
+	function calIBM(){
+		// Lấy giá trị sau khi các input được nhập
+		var inputH = document.getElementById("height").value;
+		var inputW = document.getElementById("weight").value;
+		
+		// Kiểm tra check xem input nào trống
+		var strResult = new String();
+		if(inputH == ""){
+			strResult += "身長を入力してください\n";
+		}
+		if(inputH > 999){
+			strResult += "身長には 3 桁以内の数値を入力してください。\n";
+		}
+		if(inputW == ""){
+			strResult += "体重を入力してください\n";
+		}
+		if(inputW > 999){
+			strResult += "体重には 3 桁以内の数値を入力してください。\n";
+		}
+		
+		// Điều kiện hiển thị
+		if(strResult == ""){
+			var IBM =  inputW / (inputH * inputH / 10000);
+			if(IBM < 18.5 ){
+				strResult += "低体重";
+			} else if (IBM > 25) {
+				strResult += "肥満";
+			} else {
+				strResult += "普通体重";
+			}
+			document.getElementById("result").innerHTML = strResult;
+			// return alert(strResult);
+		} else {
+			document.getElementById("height").style.backgroundColor = "red";
+			document.getElementById("weight").style.backgroundColor = "red";
+			return alert(strResult);
+		}
+	}
+</script>
+<form>
+	<fieldset>
+		<dl>
+			<dt>身長</dt>
+			<dd><input type="text" id="height">cm</dd>
+			<dt>体重</dt>
+			<dd><input type="text" id="weight">kg</dd>
+		</dl>
+	</fieldset>
+	<input type="button" value="計算" onclick="calIBM()"/>
+	<br>
+	<label id="result"></label>
+</form>
+</body>
+</html>
