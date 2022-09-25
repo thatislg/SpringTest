@@ -25,19 +25,19 @@ public class AppWithManager {
 
 	}
 
-	@Bean
-	public DataSource dataSource() {
-		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
-		EmbeddedDatabase db = builder
-			.setType(EmbeddedDatabaseType.HSQL) //.H2 or .DERBY
-			.addScript("db/sql/db.sql")
-			.build();
-
-		org.hsqldb.util.DatabaseManager.main(new String[] {
-				  "--url",  "jdbc:hsqldb:mem:testdb", "--noexit"
-				});
-
-		return db;
-	}
+//	@Bean
+//	public DataSource dataSource() {
+//		EmbeddedDatabaseBuilder builder = new EmbeddedDatabaseBuilder();
+//		EmbeddedDatabase db = builder
+//			.setType(EmbeddedDatabaseType.HSQL) //.H2 or .DERBY
+//			.addScript("db/sql/db.sql")
+//			.build();
+//
+//		org.hsqldb.util.DatabaseManager.main(new String[] {
+//				  "--url",  "jdbc:hsqldb:mem:testdb", "--noexit"
+//				});
+//
+//		return db;
+//	}
 
 }
