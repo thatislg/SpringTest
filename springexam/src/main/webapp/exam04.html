@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exam04</title>
+</head>
+<body>
+<script>
+	function alertNameOfDa(id){
+		if(id == "daunam"){
+			alert("DAU NAM MOI");
+			return alert("CHUC MUNG NAM MOI");
+		} else if(id == "cuoinam"){
+			alert("CUOI NAM");
+			return alert("TAM BIET CUOI NAM");
+		}
+	}
+</script>
+<div>
+	<input type="button" id="daunam" onclick="alertNameOfDa('daunam')" value="1月1日">
+	<input type="button" id="cuoinam" onclick="alertNameOfDa('cuoinam')" value="12月31日">
+</div>
+</body>
+</html>

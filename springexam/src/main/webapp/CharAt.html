@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CharAt</title>
+</head>
+<body>
+	<script>
+		function charAtPosition(name1, name2) {
+			var x = document.getElementById(name1).value;
+			var y = document.getElementById(name2).value;
+			//var result = x.charAt(y - 1);
+			var result = x[(y - 1)];
+			return alert(result);
+		}
+	</script>
+	<div>
+		<input id="val1" type="text" required />
+		 <input id="val2" type="number" required /> 
+		 <input type="submit" value="cal" onclick="charAtPosition('val1', 'val2')" />
+	</div>
+</body>
+</html>

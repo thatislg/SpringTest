@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exam02</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function changed() {
+			return alert('変えましたね');
+		}
+		function showname(id) {
+			var x = document.getElementById(id).value;
+			return alert(x);
+		}
+	</script>
+	<form>
+		<div>
+			<input type="radio" id="iine" name="iine_damene" value="いいね"
+				onchange="changed()"> <label for="iine">いいね</label> <input
+				type="radio" id="damene" name="iine_damene" value="だめね"
+				onchange="changed()"> <label for="damene">だめね</label>
+		</div>
+		<div>
+			<select onchange="showname('slSample')" id="slSample">
+				<option value="A">A</option>
+				<option value="B">B</option>
+				<option value="C">C</option>
+			</select>
+		</div>
+	</form>
+</body>
+</html>

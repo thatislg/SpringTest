@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jump</title>
+<script type="text/javascript">
+	function jump(){
+		var siteName = document.fm.siteName.value;
+		if(siteName == "HOCBONG"){
+			document.fm.action="http://www.mext.go.jp";
+		} else if(siteName == "KINHTE"){
+			document.fm.action="http://www.meti.go.jp";
+		} else {
+			alert("Something was wrong");
+			return false;
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="fm">
+		<dl>
+			<dt>文字列</dt>
+			<dd><input type="text" name="siteName"/></dd>
+			<input type="submit" onclick="jump()" value="execute"/>
+		</dl>
+	</form>
+</body>
+</html>

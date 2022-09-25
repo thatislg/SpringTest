@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ArraySummary</title>
+<script type="text/javascript">
+var array = [];
+
+pushArray = function(){
+	var num = document.fm.num.value;
+	array.push(num);
+	document.fm.num.value = "";
+}
+
+showAll = function(){
+	var arrayShow = "";
+	arrayShow = array.join(",");
+	alert(arrayShow);
+}
+
+sumAll = function(){
+	var sum = 0;
+	for(var i of array){
+		var temp = parseInt(i);
+		sum += temp;
+	}
+	alert(sum);
+}
+</script>
+</head>
+<body>
+	<form name="fm">
+		<dl>
+			<dt>文字列</dt>
+			<dd>
+				<input type="text" name="num" /> <input type="button"
+					onclick="pushArray()" value="追加" />
+			</dd>
+		</dl>
+		<input type="button" onclick="showAll()" value="全表示" /> <input
+			type="button" onclick="sumAll()" value="会計" />
+	</form>
+</body>
+</html>

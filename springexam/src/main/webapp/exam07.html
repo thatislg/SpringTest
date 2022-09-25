@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exam07</title>
+</head>
+<body>
+<script type="text/javascript">
+	function jump(){
+		var x = parseInt(document.fm.siteName.value);
+
+		var isZero = x % 2;
+		
+		if(isZero == 0){
+			alert('偶数');
+		} else {
+			alert('奇数');
+		}
+		
+		if (x < 0){
+			alert('負の数');
+			document.fm.action="http://www.mof.go.jp";
+			document.fm.submit();
+			return true;
+		}	
+	}
+</script>
+</head>
+<body>
+	<form name="fm" action="">
+		<dl>
+			<dt>文字列</dt>
+			<dd><input id="siteName" type="number" name="siteName"/></dd>
+		</dl>
+		<input type="submit" onclick="jump()" value="execute"/>
+	</form>
+</body>
+</body>
+</html>

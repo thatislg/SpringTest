@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>stepSumary</title>
+<script type="text/javascript">
+	calc = function()
+	{
+		var startValue = parseInt(document.fm.start.value);
+		var endValue = parseInt(document.fm.end.value);
+		
+		var result = 0;
+		for(var i = startValue; i <= endValue; i++)
+		{
+			result += i;
+		}
+		
+		alert(result);
+	}
+</script>
+</head>
+<body>
+	<form name="fm">
+	<dl>
+		<dt>開始</dt>
+		<dd><input name="start" type="text"/></dd>
+		<dt>終了</dt>
+		<dd><input name="end" type="text"/></dd>
+	</dl>
+	<input type="button" value="cal" onclick="calc()" /><br/>
+	</form>
+</body>
+</html>

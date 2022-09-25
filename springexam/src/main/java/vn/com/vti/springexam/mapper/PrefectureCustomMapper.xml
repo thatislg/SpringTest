@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- chỉ dẫn file java cho xml -->
+<mapper namespace="vn.com.vti.springexam.mapper.PrefectureCustomMapper">
+	<!-- chỉ dẫn file entity -->
+	<resultMap id="BaseResultMap" type="vn.com.vti.springexam.entity.Prefecture"
+		extends="vn.com.vti.springexam.mapper.PrefectureMapper.BaseResultMap">
+	</resultMap>
+	<select id="selectPrefectureByName" parameterType="java.lang.String" resultMap="BaseResultMap">
+		select
+			id
+			,name
+			,population
+		from 
+			prefecture
+		where
+			name=#{prefectureName, jdbcType=VARCHAR}
+	</select>
+</mapper>

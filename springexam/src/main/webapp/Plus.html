@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>PLUS</title>
+</head>
+<body>
+	<script>
+		function cal(name1, name2){
+			var x = parseInt(document.getElementById(name1).value);
+			var y = parseInt(document.getElementById(name2).value);
+			var sum = x + y;
+			return alert(sum);
+		}
+	</script>
+	<div>
+		<input id="val1" type="text" required/>
+		<label> + </label>
+		<input id="val2" type="text" required/>
+		<input type="submit" value="cal" onclick="cal('val1', 'val2')"/>
+	</div>
+</body>
+</html>

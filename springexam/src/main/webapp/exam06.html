@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Exam06</title>
+</head>
+<body>
+	<script>
+		function changeWord(name1, pos){
+			var x = document.getElementById(pos).value;
+			if(name1 == "upper"){
+				return alert(x.toUpperCase());
+			} else if(name1 == "lower"){
+				return alert(x.toLowerCase());
+			}	
+		}
+		
+	</script>
+	<div>
+		<input id="val1" type="text" required/>
+		<input type="submit" value="大文字" onclick="changeWord('upper', 'val1')"/>
+		<input type="submit" value="小文字" onclick="changeWord('lower', 'val1')"/>
+	</div>
+</body>
+</html>
