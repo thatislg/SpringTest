@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src=" checkutil.js"></script>
+<script type="text/javascript">
+	function sum() {
+		var errTag = document.getElementById("err");
+		var resultTag = document.getElementById("result");
+		//初期化
+		errTag.innerHTML = "";
+		resultTag.innerHTML = "";
+		document.fm.val1.style.backgroundColor = "white";
+		document.fm.val2.style.backgroundColor = "white";
+		//入力
+		var val1 = document.fm.val1.value;
+		var val2 = document.fm.val2.value;
+		//入力チェック
+		var errorMessages = [];
+		if (val1 == "") {
+			errorMessages.push("数値 1 を入力してください。");
+			document.fm.val1.style.backgroundColor = "red";
+		}
+		if (val2 == "") {
+			errorMessages.push("数値 2 を入力してください。");
+			document.fm.val2.style.backgroundColor = "red";
+		}
+		if (!isPlusNumber(document.fm.val1.value)) {
+			errorMessages.push("数値 1 に正の整数を入力してください。");
+			document.fm.val1.style.backgroundColor = "red";
+		}
+		if (!isPlusNumber(document.fm.val2.value)) {
+			errorMessages.push("数値 2 に正の整数を入力してください。");
+			document.fm.val2.style.backgroundColor = "red";
+		}
+		if (errorMessages.length > 0) {
+			var msg = errorMessages.join("<br>");
+			errTag.innerHTML = msg;
+			return;
+		}
+		//加工と出力
+		var sum = parseInt(document.fm.val1.value)
+				+ parseInt(document.fm.val2.value);
+		resultTag.innerHTML = "結果:" + sum;
+	}
+</script>
+</head>
+<body>
+	<span id="err" style="color: red"></span>
+	<form name="fm">
+		<input name="val1" type="text" />+<input name="val2" type="text" /> <input
+			type="button" value="計算" onclick="sum();" /><br />
+	</form>
+	<div id="result"></div>
+</body>
+</html>
